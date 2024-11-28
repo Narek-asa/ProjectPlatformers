@@ -6,56 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4a978fed-8c33-46c0-82b8-55de431b1304" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectPlatformer_Comp490/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectPlatformer_Comp490/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Platformer/Scripts/EnemyAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2D Platformer/Scripts/EnemyAI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Platformer/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2D Platformer/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Platformer/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2D Platformer/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/2D Platformer/Scripts/PlayerDeathState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2D Platformer/Scripts/PlayerDeathState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Levels/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Levels/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Appearing (96x96).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Appearing (96x96).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Desappearing (96x96).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Desappearing (96x96).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Mask Dude.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Mask Dude/Double Jump (32x32).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Mask Dude/Double Jump (32x32).png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Mask Dude/Fall (32x32).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Mask Dude/Fall (32x32).png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Mask Dude/Hit (32x32).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Mask Dude/Hit (32x32).png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Mask Dude/Idle (32x32).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Mask Dude/Idle (32x32).png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Mask Dude/Jump (32x32).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Mask Dude/Jump (32x32).png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Mask Dude/Run (32x32).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Mask Dude/Run (32x32).png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Mask Dude/Wall Jump (32x32).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Mask Dude/Wall Jump (32x32).png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Ninja Frog.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Ninja Frog.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Ninja Frog/Double Jump (32x32).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Ninja Frog/Double Jump (32x32).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Ninja Frog/Fall (32x32).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Ninja Frog/Fall (32x32).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Ninja Frog/Hit (32x32).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Ninja Frog/Hit (32x32).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Ninja Frog/Idle (32x32).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Ninja Frog/Idle (32x32).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Ninja Frog/Jump (32x32).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Ninja Frog/Jump (32x32).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Ninja Frog/Run (32x32).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Ninja Frog/Run (32x32).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Ninja Frog/Wall Jump (32x32).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Ninja Frog/Wall Jump (32x32).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Pink Man.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Pink Man.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Pink Man/Double Jump (32x32).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Pink Man/Double Jump (32x32).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Pink Man/Fall (32x32).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Pink Man/Fall (32x32).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Pink Man/Hit (32x32).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Pink Man/Hit (32x32).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Pink Man/Idle (32x32).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Pink Man/Idle (32x32).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Pink Man/Jump (32x32).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Pink Man/Jump (32x32).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Pink Man/Run (32x32).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Pink Man/Run (32x32).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Pink Man/Wall Jump (32x32).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Pink Man/Wall Jump (32x32).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Virtual Guy.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Virtual Guy.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Virtual Guy/Double Jump (32x32).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Virtual Guy/Double Jump (32x32).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Virtual Guy/Fall (32x32).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Virtual Guy/Fall (32x32).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Virtual Guy/Hit (32x32).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Virtual Guy/Hit (32x32).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Virtual Guy/Idle (32x32).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Virtual Guy/Idle (32x32).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Virtual Guy/Jump (32x32).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Virtual Guy/Jump (32x32).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Virtual Guy/Run (32x32).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Virtual Guy/Run (32x32).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Virtual Guy/Wall Jump (32x32).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Adventure 1/Assets/Main Characters/Virtual Guy/Wall Jump (32x32).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Enemy/MeleeEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Enemy/MeleeEnemy.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +92,7 @@
       <option name="presentableId" value="Default" />
       <updated>1730786994810</updated>
       <workItem from="1730786996074" duration="4000" />
-      <workItem from="1732763808875" duration="10053000" />
+      <workItem from="1732763808875" duration="11131000" />
     </task>
     <servers />
   </component>
