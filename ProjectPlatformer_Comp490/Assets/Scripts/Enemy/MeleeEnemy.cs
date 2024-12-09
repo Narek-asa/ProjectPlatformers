@@ -8,11 +8,11 @@ public class MeleeEnemy : MonoBehaviour
     [SerializeField] private float damage;
     [SerializeField] private float damageTaken;
 
-    private Health enemyHealth;
+    private EnemyHealth enemyHealth;
 
     private void Awake()
     {
-        enemyHealth = GetComponent<Health>();
+        enemyHealth = GetComponent<EnemyHealth>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
