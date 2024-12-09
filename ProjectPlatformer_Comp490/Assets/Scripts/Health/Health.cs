@@ -60,6 +60,7 @@ public class Health : MonoBehaviour
             {
                 // Player is hurt
                 invincibilityTimer = invincibilityDuration;
+                Debug.Log("Player took damage, currentHealth: " + currentHealth);
             }
             else
             {
@@ -71,6 +72,45 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
-        Destroy(gameObject);
+        Debug.Log("Die() called. Current Health: " + currentHealth);
+        GameManager gm = FindObjectOfType<GameManager>();
+        if (gm != null)
+        {
+            gm.RespawnPlayer();
+        }
+        else
+        {
+            Debug.LogError("No GameManager Found: Unable to respawn player");
+        }
+    }
+
+    public void ResetPlayer(Vector3 spawnPosition)
+    {
+        currentHealth = startingHealth;
+
+        // Reset position
+        transform.position = spawnPosition;
+
+        // Reset physics
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.velocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+        }
+    }
+
+    public void ResetPlayerStats(float newHealthValue, Vector3 spawnPosition)
+    {
+        currentHealth = newHealthValue;
+
+        transform.position = spawnPosition;
+
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.velocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+        }
     }
 }
