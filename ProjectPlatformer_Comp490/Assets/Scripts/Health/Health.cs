@@ -70,7 +70,7 @@ public class Health : MonoBehaviour
         }
     }
 
-    private void Die()
+    public void Die()
     {
         Debug.Log("Die() called. Current Health: " + currentHealth);
         GameManager gm = FindObjectOfType<GameManager>();
