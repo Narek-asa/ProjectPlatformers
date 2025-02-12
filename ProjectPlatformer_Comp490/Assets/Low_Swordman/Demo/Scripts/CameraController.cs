@@ -2,34 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraController : MonoBehaviour {
-
-
+public class CameraController : MonoBehaviour
+{
     public static CameraController Instance;
 
+    [Tooltip("The target for the camera to follow")]
     public GameObject Target;
-    public int Smoothvalue =2;
-    public float PosY = 1;
 
+    [Tooltip("Time for the camera to reach the target position")]
+    [SerializeField] private float smoothTime = 0.5f;
 
-    // Use this for initialization
-    public Coroutine my_co;
+    [Tooltip("Vertical offset from the target's position")]
+    public float PosY = 1f;
 
-    void Start()
+    private Vector3 velocity = Vector3.zero;
+
+    void LateUpdate()
     {
-     
+        if (Target == null)
+            return;
+
+        // Base target position
+        Vector3 targetPos = new Vector3(Target.transform.position.x, Target.transform.position.y + PosY, -100);
+
+        // Smoothly move the camera toward the target position
+        Vector3 newPos = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, smoothTime);
+
+        transform.position = newPos;
     }
-
-
-    void Update()
-    {
-        Vector3 Targetpos = new Vector3(Target.transform.position.x, Target.transform.position.y + PosY, -100);
-        transform.position = Vector3.Lerp(transform.position, Targetpos, Time.deltaTime * Smoothvalue);
-
-
-
-    }
-
-
-
 }
+

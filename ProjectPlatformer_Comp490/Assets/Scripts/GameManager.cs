@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -9,13 +7,12 @@ public class GameManager : MonoBehaviour
 
     public void RespawnPlayer()
     {
-        // Check to see if player has GameManager script and player is assigned
         if (player != null)
         {
             Health playerHealth = player.GetComponent<Health>();
             if (playerHealth != null)
             {
-                // Reset the player's health and position to "Respawn"
+                // Respawn the player at the current spawnPoint
                 playerHealth.ResetPlayer(spawnPoint.position);
             }
             else
@@ -27,5 +24,12 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogError("No player assigned in GameManager!");
         }
+    }
+
+    // This method updates the spawn point.
+    public void UpdateSpawnPoint(Transform newSpawnPoint)
+    {
+        spawnPoint = newSpawnPoint;
+        Debug.Log("Spawn point updated to: " + newSpawnPoint.position);
     }
 }
