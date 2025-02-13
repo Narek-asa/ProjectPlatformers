@@ -12099,6 +12099,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 1616665873
       objectReference: {fileID: 0}
+    - target: {fileID: 5999076916345595454, guid: 393c38f2145ab0245916f1577cdc22e0, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6367132414337422093, guid: 393c38f2145ab0245916f1577cdc22e0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.16
