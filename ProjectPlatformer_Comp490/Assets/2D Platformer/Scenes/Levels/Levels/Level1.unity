@@ -791,6 +791,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7988201676173146426, guid: 9c139407ff7704a41848fbea92766006, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2b6e306f144fd2047ad36490140f8b85, type: 3}
+    - target: {fileID: 7988201676173146426, guid: 9c139407ff7704a41848fbea92766006, type: 3}
       propertyPath: damageTaken
       value: 1
       objectReference: {fileID: 0}
@@ -3629,6 +3633,10 @@ PrefabInstance:
       propertyPath: damage
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7988201676173146426, guid: 9c139407ff7704a41848fbea92766006, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2b6e306f144fd2047ad36490140f8b85, type: 3}
     - target: {fileID: 7988201676173146426, guid: 9c139407ff7704a41848fbea92766006, type: 3}
       propertyPath: damageTaken
       value: 1
@@ -7981,6 +7989,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7988201676173146426, guid: 9c139407ff7704a41848fbea92766006, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 558f9f56f603a954b8d45e17e89341d9, type: 3}
+    - target: {fileID: 7988201676173146426, guid: 9c139407ff7704a41848fbea92766006, type: 3}
       propertyPath: damageTaken
       value: 1
       objectReference: {fileID: 0}
@@ -10243,6 +10255,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7988201676173146426, guid: 9c139407ff7704a41848fbea92766006, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2b6e306f144fd2047ad36490140f8b85, type: 3}
+    - target: {fileID: 7988201676173146426, guid: 9c139407ff7704a41848fbea92766006, type: 3}
       propertyPath: damageTaken
       value: 1
       objectReference: {fileID: 0}
@@ -11316,6 +11332,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7988201676173146426, guid: 9c139407ff7704a41848fbea92766006, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 558f9f56f603a954b8d45e17e89341d9, type: 3}
+    - target: {fileID: 7988201676173146426, guid: 9c139407ff7704a41848fbea92766006, type: 3}
       propertyPath: damageTaken
       value: 1
       objectReference: {fileID: 0}
@@ -11492,6 +11512,14 @@ PrefabInstance:
       propertyPath: damage
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7988201676173146426, guid: 9c139407ff7704a41848fbea92766006, type: 3}
+      propertyPath: EnemyDeath
+      value: 
+      objectReference: {fileID: 8300000, guid: c8182a2c71eec204083cb81c812dff01, type: 3}
+    - target: {fileID: 7988201676173146426, guid: 9c139407ff7704a41848fbea92766006, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 558f9f56f603a954b8d45e17e89341d9, type: 3}
     - target: {fileID: 7988201676173146426, guid: 9c139407ff7704a41848fbea92766006, type: 3}
       propertyPath: damageTaken
       value: 1
@@ -12546,6 +12574,10 @@ PrefabInstance:
       propertyPath: damage
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7988201676173146426, guid: 9c139407ff7704a41848fbea92766006, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: bd8857660a16ba549b8cc522d93d9117, type: 3}
     - target: {fileID: 7988201676173146426, guid: 9c139407ff7704a41848fbea92766006, type: 3}
       propertyPath: damageTaken
       value: 1

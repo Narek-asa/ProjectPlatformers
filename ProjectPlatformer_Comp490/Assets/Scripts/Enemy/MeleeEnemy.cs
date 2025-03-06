@@ -8,6 +8,10 @@ public class MeleeEnemy : MonoBehaviour
     [SerializeField] private float damage;
     [SerializeField] private float damageTaken;
 
+
+    [Header("Enemy Death Sound")]
+    [SerializeField] private AudioClip deathSound;
+
     private EnemyHealth enemyHealth;
 
     private void Awake()
@@ -45,7 +49,7 @@ public class MeleeEnemy : MonoBehaviour
 
                     // Make the player bounce upwards
                     playerRb.velocity = new Vector2(playerRb.velocity.x, 10f); // Adjust bounce force as needed
-
+                    SoundManager.instance.PlaySound(deathSound);
                     // Optional: Add score or play sound effect
                 }
                 else
