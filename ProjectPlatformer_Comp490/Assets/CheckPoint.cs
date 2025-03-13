@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
-    // Optionally assign a separate spawn point via the Inspector; otherwise, the checkpoint's own transform is used.
     [SerializeField] private Transform checkpointSpawnPoint;
 
     private void Start()
@@ -13,7 +12,7 @@ public class Checkpoint : MonoBehaviour
         }
     }
 
-    // IMPORTANT: Use OnTriggerEnter2D if you're working in 2D!
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))

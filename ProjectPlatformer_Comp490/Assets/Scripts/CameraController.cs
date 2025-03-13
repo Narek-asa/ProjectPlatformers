@@ -6,12 +6,15 @@ namespace Platformer
 {
     public class CameraController : MonoBehaviour
     {
-        public float damping = 1.5f; // movement speed
+        // movement speed
+        public float damping = 1.5f;
 
         public Vector2
-            offset = new Vector2(0f, 0f); // special effect if you want the character to be not in center of screen
+            // character to be not in center of screen
+            offset = new Vector2(0f, 0f);
 
-        public bool faceLeft; //  mirror reflection of OFFSET along the y axis
+        //  mirror reflection of OFFSET along the y axis
+        public bool faceLeft;
         private Transform player;
         private int lastX;
         private Vector3 velocity = Vector3.zero;
