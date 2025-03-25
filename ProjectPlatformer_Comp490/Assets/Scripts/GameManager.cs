@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -5,10 +6,17 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private Transform spawnPoint;
 
+    private Animator anim;
+
     public void RespawnPlayer()
     {
+
+
+
         if (player != null)
         {
+
+
             Health playerHealth = player.GetComponent<Health>();
             if (playerHealth != null)
             {

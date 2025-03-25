@@ -12417,9 +12417,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1200773376}
     - target: {fileID: 2532661048511870018, guid: 393c38f2145ab0245916f1577cdc22e0, type: 3}
+      propertyPath: jumpPower
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532661048511870018, guid: 393c38f2145ab0245916f1577cdc22e0, type: 3}
       propertyPath: jumpSound
       value: 
       objectReference: {fileID: 8300000, guid: 41bf0b1a788e85c4cbb40a817e976dc9, type: 3}
+    - target: {fileID: 2532661048511870018, guid: 393c38f2145ab0245916f1577cdc22e0, type: 3}
+      propertyPath: wallJumpX
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532661048511870018, guid: 393c38f2145ab0245916f1577cdc22e0, type: 3}
+      propertyPath: wallJumpY
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532661048511870018, guid: 393c38f2145ab0245916f1577cdc22e0, type: 3}
+      propertyPath: coyoteTime
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532661048511870018, guid: 393c38f2145ab0245916f1577cdc22e0, type: 3}
+      propertyPath: extraJumps
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3656202001601633238, guid: 393c38f2145ab0245916f1577cdc22e0, type: 3}
       propertyPath: m_SortingLayer
       value: 1

@@ -7,6 +7,9 @@ public class Health : MonoBehaviour
     [SerializeField] private float startingHealth;
     public float currentHealth { get; private set; }
 
+    private Animator anim;
+    private bool dead;
+
     [Header("Invincibility Frames")]
     [Tooltip("Duration of invincibility after taking damage (in seconds).")]
     [SerializeField] private float invincibilityDuration;
@@ -18,13 +21,13 @@ public class Health : MonoBehaviour
     private void Awake()
     {
         currentHealth = startingHealth;
+        anim = GetComponent<Animator>();
 
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer != null)
         {
             originalColor = spriteRenderer.color;
         }
-
     }
 
     private void Update()
@@ -59,15 +62,29 @@ public class Health : MonoBehaviour
             if (currentHealth > 0)
             {
                 // Player is hurt
+                anim.SetTrigger("hurt");
                 invincibilityTimer = invincibilityDuration;
                 Debug.Log("Player took damage, currentHealth: " + currentHealth);
             }
             else
             {
                 // Player is dead
-                Die();
+                if (!dead)
+                {
+                    dead = true;
+                    GetComponent<PlayerMovement>().enabled = false;
+                    // Trigger death animation
+                    anim.SetTrigger("die");
+                    // The respawn will now be handled by the animation event calling OnDeathAnimationComplete()
+                }
             }
         }
+    }
+
+    // This method is called via an Animation Event at the end of your death animation
+    public void OnDeathAnimationComplete()
+    {
+        Die();
     }
 
     public void Die()
