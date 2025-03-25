@@ -103,9 +103,8 @@ public class Health : MonoBehaviour
 
     public void ResetPlayer(Vector3 spawnPosition)
     {
+        // Reset health and position
         currentHealth = startingHealth;
-
-        // Reset position
         transform.position = spawnPosition;
 
         // Reset physics
@@ -115,7 +114,18 @@ public class Health : MonoBehaviour
             rb.velocity = Vector2.zero;
             rb.angularVelocity = 0f;
         }
+
+        // Reset Animator state: Rebind resets all animator states to the default
+        anim.Rebind();
+        anim.Update(0f);
+
+        // Mark the player as alive
+        dead = false;
+
+        // Re-enable player movement
+        GetComponent<PlayerMovement>().enabled = true;
     }
+
 
     public void ResetPlayerStats(float newHealthValue, Vector3 spawnPosition)
     {
