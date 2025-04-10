@@ -21,6 +21,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float wallJumpX;
     [SerializeField] private float wallJumpY;
 
+    [Header("Gravity Settings")]
+    [SerializeField] private float normalGravityScale = 4f;
+    [SerializeField] private float wallJumpGravityScale = 2f;
+    [SerializeField] private float gravityRestoreTime = 0.2f;
+    private float gravityRestoreTimer = 0f;
+    private bool isWallJumping = false;
+
     [Header("Background Slide Speed")]
     [SerializeField]private float slideSpeed = 1f;
 
@@ -31,17 +38,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private int extraJumps;
     private int jumpCounter;
 
-
     private Rigidbody2D body;
     private Animator anim;
     private BoxCollider2D boxCollider;
     private float wallJumpCooldown;
     private float horizontalInput;
-
-    
-
-
-
 
     private void Awake()
     {
@@ -51,87 +52,102 @@ public class PlayerMovement : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
     }
 
-    private void Update()
+private void Update()
+{
+    horizontalInput = Input.GetAxis("Horizontal");
+
+    // Flip player based on input
+    if (horizontalInput > 0.01f)
+        transform.localScale = Vector3.one;
+    else if (horizontalInput < -0.01f)
+        transform.localScale = new Vector3(-1, 1, 1);
+
+    anim.SetBool("Run", horizontalInput != 0);
+    anim.SetBool("grounded", isGrounded());
+
+    if (Input.GetKeyDown(KeyCode.Space))
+        Jump();
+
+    if (Input.GetKeyUp(KeyCode.Space) && body.velocity.y > 0)
+        body.velocity = new Vector2(body.velocity.x, body.velocity.y / 2);
+
+    // Wall sticking
+    if (onWall() && !isWallJumping)
     {
-
-        horizontalInput = Input.GetAxis("Horizontal");
-
-
-        //flips player left and right input
-        if (horizontalInput > 0.01f)
-            transform.localScale = Vector3.one;
-        else if (horizontalInput < -0.01f)
-            transform.localScale = new Vector3(-1,1,1);
-
-        //Set animator parameters
-        anim.SetBool("Run", horizontalInput != 0);
-        anim.SetBool("grounded", isGrounded());
-
-        //Jump
-        if(Input.GetKeyDown(KeyCode.Space))
-            Jump();
-
-        //adjustable jump height
-        if(Input.GetKeyUp(KeyCode.Space) && body.velocity.y > 0) 
-                body.velocity = new Vector2(body.velocity.x, body.velocity.y / 2);
-
-        if(onWall())
+        body.gravityScale = 0;
+        body.velocity = Vector2.zero;
+    }
+    else
+    {
+        if (isWallJumping)
         {
-            body.gravityScale = 0;
-            body.velocity = Vector2.zero;
+            gravityRestoreTimer += Time.deltaTime;
+            body.gravityScale = Mathf.Lerp(wallJumpGravityScale, normalGravityScale, gravityRestoreTimer / gravityRestoreTime);
+            if (gravityRestoreTimer >= gravityRestoreTime)
+            {
+                isWallJumping = false;
+                body.gravityScale = normalGravityScale;
+            }
         }
         else
         {
-            body.gravityScale = 4;
+            // Only update horizontal velocity from input when NOT wall jumping.
             body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
+            body.gravityScale = normalGravityScale;
+        }
 
-            if (isGrounded())
-            {
-                coyoteCounter = coyoteTime;
-                jumpCounter = extraJumps;
-            }
-            else
-                coyoteCounter -= Time.deltaTime;
+        if (isGrounded())
+        {
+            coyoteCounter = coyoteTime;
+            jumpCounter = extraJumps;
         }
+        else
+        {
+            coyoteCounter -= Time.deltaTime;
         }
+    }
+}
 
     //Jump Method
     private void Jump()
     {
+        if (coyoteCounter < 0 && !onWall() && jumpCounter <= 0)
+            return;
 
-        if (coyoteCounter < 0 && !onWall() && jumpCounter <= 0) return;
         SoundManager.instance.PlaySound(jumpSound);
 
         if (onWall())
             WallJump();
         else
         {
-            if (isGrounded())
-                body.velocity = new Vector2(body.velocity.x, jumpPower);
-            else
+            if (isGrounded() || coyoteCounter > 0)
             {
-                if(coyoteCounter > 0)
-                    body.velocity = new Vector2(body.velocity.x, jumpPower);
-                else
-                {
-                    if (jumpCounter > 0)
-                    {
-                        body.velocity = new Vector2(body.velocity.x, jumpPower);
-                        jumpCounter--;
-                    }
-                }
+                body.velocity = new Vector2(body.velocity.x, jumpPower);
+            }
+            else if (jumpCounter > 0)
+            {
+                body.velocity = new Vector2(body.velocity.x, jumpPower);
+                jumpCounter--;
             }
             coyoteCounter = 0;
         }
-
     }
 
 
     private void WallJump()
     {
-        body.AddForce(new Vector2(-Mathf.Sign(transform.localScale.x) * wallJumpX, wallJumpY));
-        wallJumpCooldown = 0;
+        float desiredDirection = -Mathf.Sign(transform.localScale.x);
+        body.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * wallJumpX, wallJumpY);
+
+        transform.localScale = new Vector3(desiredDirection, transform.localScale.y, transform.localScale.z);
+
+        // Immediately use a lower gravity to create floatiness
+        body.gravityScale = wallJumpGravityScale;
+
+        isWallJumping = true;
+        gravityRestoreTimer = 0f;
     }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
