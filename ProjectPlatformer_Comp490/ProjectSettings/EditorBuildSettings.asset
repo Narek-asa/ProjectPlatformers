@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/2D Platformer/Scenes/Levels/Levels/Level1.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
+  - enabled: 1
+    path: Assets/2D Platformer/Scenes/Levels/Levels/Level2.unity
+    guid: 09fb7f74897f4ee4295a02209de90c0c
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 3a3b649942b768a46a0c72a2261cd9ee, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: efd04af99f31b38449ec97f7ed6dedb1, type: 2}
