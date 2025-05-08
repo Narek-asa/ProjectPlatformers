@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 5999076916345595454}
   - component: {fileID: 2532661048511870018}
   - component: {fileID: 5664307947385918058}
-  - component: {fileID: 3709312214930033479}
   - component: {fileID: 1167824325175504167}
   m_Layer: 0
   m_Name: Player
@@ -182,7 +181,15 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 512
+  coyoteTime: 0
+  wallJumpX: 0
+  wallJumpY: 0
+  normalGravityScale: 4
+  wallJumpGravityScale: 2
+  gravityRestoreTime: 0.2
   slideSpeed: 2
+  jumpSound: {fileID: 0}
+  extraJumps: 0
 --- !u!95 &5664307947385918058
 Animator:
   serializedVersion: 5
@@ -204,20 +211,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3709312214930033479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6981172375947960319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aec9d2bcc92855045883e870e62123af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 3
-  invincibilityDuration: 1
 --- !u!114 &1167824325175504167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,5 +223,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7d3e9e30961549aeb03bb67c3f723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 6981172375947960319}
+  player: {fileID: 0}
   spawnPoint: {fileID: 0}

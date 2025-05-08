@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine;
+
 public class CameraController : MonoBehaviour
 {
     public static CameraController Instance;
@@ -17,18 +19,49 @@ public class CameraController : MonoBehaviour
 
     private Vector3 velocity = Vector3.zero;
 
-    void LateUpdate()
+    private void Awake()
     {
-        if (Target == null)
+        // Singleton setup
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
             return;
+        }
+        // (optional) DontDestroyOnLoad(gameObject);
+    }
 
-        // Base target position
-        Vector3 targetPos = new Vector3(Target.transform.position.x, Target.transform.position.y + PosY, -100);
+    private void LateUpdate()
+    {
+        // If we don't have a target yet, try to find the player by tag.
+        if (Target == null)
+        {
+            GameObject playerGO = GameObject.FindGameObjectWithTag("Player");
+            if (playerGO != null)
+            {
+                Target = playerGO;
+            }
+            else
+            {
+                // No player in scene yet, nothing to do this frame.
+                return;
+            }
+        }
 
-        // Smoothly move the camera toward the target position
-        Vector3 newPos = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, smoothTime);
-
-        transform.position = newPos;
+        // Now smoothly follow the assigned target.
+        Vector3 targetPos = new Vector3(
+            Target.transform.position.x,
+            Target.transform.position.y + PosY,
+            -100);
+        transform.position = Vector3.SmoothDamp(
+            transform.position,
+            targetPos,
+            ref velocity,
+            smoothTime);
     }
 }
+
 
